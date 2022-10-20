@@ -6,7 +6,7 @@
     "variables": {},
     "resources": [
         {
-            "name": "MyStorageAccount",
+            "name": "mystorageaccount1fx",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2021-04-01",
             "tags": {
@@ -19,19 +19,6 @@
                 "name": "Premium_LRS",
                 "tier": "Premium"
             }
-        },
-        {
-            "name": "[toLower('MyVirtualMachine')]",
-            "type": "Microsoft.Storage/storageAccounts",
-            "apiVersion": "2021-04-01",
-            "location": "[resourceGroup().location]",
-            "tags": {
-                "displayName": "windowsVM1 Storage Account"
-            },
-            "sku": {
-                "name": "Standard_LRS"
-            },
-            "kind": "Storage"
         }
     ],
     "outputs": {}
